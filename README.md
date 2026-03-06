@@ -5,8 +5,9 @@ A personal portfolio website built with React.js to showcase my skills, projects
 ## 🌐 Live Demo
 
 
-## 📸 Preview
-![Portfolio Preview](src/images/portfolio.png)
+## 📸 Screenshot
+<img width="1902" height="974" alt="Screenshot 2026-03-06 220436" src="https://github.com/user-attachments/assets/c33e770b-9096-466d-8ba5-0b4e935b05b2" />
+
 
 ## 🛠️ Tech Stack
 - **React.js** - Frontend framework
