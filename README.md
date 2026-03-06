@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [Kappeta Jaya Chandra Reddy's Portfolio](https://kjcreddy666.github.io/portfolio/)
 
 ![Kappeta Jaya Chandra Reddys's Portfolio-image](src/images/portfolio-logo.png)
@@ -27,3 +28,7 @@ This project is a showcase of my skills and projects, developed using HTML5, CSS
 
 Feel free to reach out via email at [kjcreddy666@gmail.com](mailto:your.email@example.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/kjcreddy666/).
 
+=======
+# portfolio
+Personal portfolio website built with React.js showcasing my skills, projects and education.
+>>>>>>> 9c23436f1fdb52af13bc93cbb5a26a86c13215ec
