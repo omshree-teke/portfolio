@@ -26,7 +26,7 @@ Contact Form:<img width="1905" height="975" alt="Screenshot 2026-03-06 231956" s
 - Projects showcase
 - Education timeline
 - Contact form with EmailJS integration
-- resume attached
+- Resume (PDF)
 
 ## 🚀 Getting Started
 
