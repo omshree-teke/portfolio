@@ -38,3 +38,8 @@ body{
 ::-webkit-scrollbar-thumb:hover {
   background: #626970;
 }
+
+
+section, [id] {
+    scroll-margin-top: 80px;
+}

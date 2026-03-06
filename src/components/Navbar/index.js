@@ -9,27 +9,29 @@ const Nav = styled.div`
     height : 70px;
     display : flex;
     justify-content : center;
-    align-item : center;
+    align-items : center;
     font-size : 1rem;
+    position : fixed;
+    top : 0;
+    width : 100%;
+    z-index : 10;
+    border-bottom : 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter : blur(10px);
     @media screen and (max-width : 960px) {
         transition : 0.8s all ease;
     }
 `;
 
 const NavContainer = styled.div`
-    background-color : ${({theme})=> theme.card_light};
+    background-color : transparent;
     display : flex;
     justify-content : space-between;
     align-items : center;
     height : 55px;
-    border-radius : 0.8rem;
-    z-index : 1;
-    width : 100%;
-    padding : 0 24px;
-    max-width : 1200px;
-    position : fixed;
-    top : 0;
     z-index : 10;
+    width : 100%;
+    padding : 0 48px;
+    max-width : 100%;
     transition: all 0.3s ease;
 `;
 
@@ -191,6 +193,11 @@ const MobileButton = styled.a`
     }
 `;
 
+const NavSpacer = styled.div`
+    height : 70px;
+    width : 100%;
+`;
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = React.useState(false);
     const [isScroll, setIsScroll] = React.useState(false);
@@ -204,51 +211,53 @@ const Navbar = () => {
           window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-      
 
     return (
-        <Nav>
-            <NavContainer className={isScroll ? "scrolled" : ""}>
-                <NavLogo>
-                    Jay
-                </NavLogo>
+        <>
+            <Nav>
+                <NavContainer className={isScroll ? "scrolled" : ""}>
+                    <NavLogo>
+                        {"</=>"}
+                    </NavLogo>
 
-                <MobileIcon>
-                    <FaBars onClick={()=>{setIsOpen(!isOpen)}}></FaBars>
-                </MobileIcon>
+                    <MobileIcon>
+                        <FaBars onClick={()=>{setIsOpen(!isOpen)}}></FaBars>
+                    </MobileIcon>
 
-                <NavItems>  
-                    <NavLink href="#about">About</NavLink>
-                    <NavLink href="#skills">Skills</NavLink>
-                    <NavLink href="#projects">Projects</NavLink>
-                    <NavLink href="#education">Education</NavLink>
-                </NavItems>
+                    <NavItems>  
+                        <NavLink href="#about">About</NavLink>
+                        <NavLink href="#skills">Skills</NavLink>
+                        <NavLink href="#projects">Projects</NavLink>
+                        <NavLink href="#education">Education</NavLink>
+                        <NavLink href="#contact">Contact</NavLink>
+                    </NavItems>
 
-                <ButtonContainer>
-                    <Button href="https://github.com/kjcreddy666" target="blank">Github</Button>
-                    <Button href="https://linkedin.com/in/kjcreddy666" target="blank">LinkedIn</Button>
-                </ButtonContainer>
+                    <ButtonContainer>
+                        <Button href={process.env.PUBLIC_URL + "/resume.pdf"} target="_blank">Resume</Button>
+                        <Button href="https://github.com/omshree-teke" target="blank">Github</Button>
+                        <Button href="https://www.linkedin.com/in/omshree-teke-790498259/" target="blank">LinkedIn</Button>
+                    </ButtonContainer>
 
-                {
-                    isOpen && 
+                    {
+                        isOpen && 
                             <MobileMenu isOpen={isOpen}>
                                 <MobileLink href="#about" onClick={()=>setIsOpen(!isOpen)}>About</MobileLink>
                                 <MobileLink href="#skills" onClick={()=>setIsOpen(!isOpen)}>Skills</MobileLink>
                                 <MobileLink href="#projects" onClick={()=>setIsOpen(!isOpen)}>Projects</MobileLink>
                                 <MobileLink href="#education" onClick={()=>setIsOpen(!isOpen)}>Education</MobileLink>
+                                <MobileLink href="#contact" onClick={()=>setIsOpen(!isOpen)}>Contact</MobileLink>
                                 <MobileButtonContainer isOpen={isOpen}>
-                                    <MobileButton href="https://github.com/kjcreddy666" target="blank">Github</MobileButton>
-                                    <MobileButton href="https://linkedin.com/in/kjcreddy666" target="blank">LinkedIn</MobileButton>
+                                    <MobileButton href={process.env.PUBLIC_URL + "/resume.pdf"} target="_blank">Resume</MobileButton>
+                                    <MobileButton href="https://github.com/omshree-teke" target="blank">Github</MobileButton>
+                                    <MobileButton href="https://www.linkedin.com/in/omshree-teke-790498259/" target="blank">LinkedIn</MobileButton>
                                 </MobileButtonContainer>
                             </MobileMenu>
-                        
-                        
-                }
+                    }
 
-            </NavContainer>
-
-
-        </Nav>
+                </NavContainer>
+            </Nav>
+            <NavSpacer />
+        </>
     )
 }
 

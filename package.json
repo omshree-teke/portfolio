@@ -1,7 +1,7 @@
 {
-  "name": "jay-portfolio",
+  "name": "omshree-portfolio",
   "version": "0.1.0",
-  "homepage": "https://kjcreddy666.github.io/portfolio",
+  "homepage": "https://omshree-teke.github.io/portfolio",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",

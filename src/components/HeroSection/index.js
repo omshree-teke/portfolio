@@ -11,6 +11,8 @@ const HeroConatiner = styled.div`
     align-items : center;
     position: relative;
     padding: 80px 30px;
+    min-height: 100vh;
+    
 
     @media (max-width: 960px) {
         padding: 66px 16px;
@@ -174,6 +176,8 @@ const Img = styled.img`
   }
 `;
 
+
+
 const Hero = () => {
     return (
         <div id="about">
@@ -209,7 +213,7 @@ const Hero = () => {
                     </HeroLeftContainer>
 
                     <HeroRightContainer>
-                        <Img></Img>
+                        <Img src={require('../../images/profilepicdarkbg.png')} alt=""/>
                     </HeroRightContainer>
                 </HeroInnerContainer>
             </HeroConatiner>
@@ -218,3 +222,12 @@ const Hero = () => {
 }
 
 export default Hero;
+
+
+
+
+
+
+
+
+
