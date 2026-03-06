@@ -20,7 +20,7 @@ A personal portfolio website built with React.js to showcase my skills, projects
 - Projects showcase
 - Education timeline
 - Contact form with EmailJS integration
-- Downloadable resume
+- resume attached
 
 ## 🚀 Getting Started
 
